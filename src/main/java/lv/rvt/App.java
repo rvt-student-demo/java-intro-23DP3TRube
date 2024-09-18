@@ -8,16 +8,22 @@ public class App
     
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("ievadi vardu:");
-        String name = scanner.nextLine();
-        
-        System.out.println("ievadi uzvardu:");
-        String uzvards = scanner.nextLine();
+        System.out.println("Ievadi 1. skaitli: ");
+        int number1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Ievadi 2. skaitli: ");
+        int number2 = Integer.valueOf(scanner.nextLine());
+        double div = ( (double) number2 / number1);
 
-        System.out.println("ievadi grupu:");
-        String grupa = scanner.nextLine();
+        int sum = (number1 + number2);
+        int minus = (number1 - number2);
+        int reiz = (number1 * number2);
+        double dal = ((double)number2 / number1);
 
-        System.out.println("Students: "+ name + " " + uzvards + ", " + "grupa: " + grupa);
-        
+        System.out.println(number1 + " + " + number2 + " = "  + sum);
+        System.out.println(number1 + " - " + number2 + " = "  + minus);
+        System.out.println(number1 + " * " + number2 + " = "  + reiz);
+        System.out.println(number1 + " / " + number2 + " = "  + dal);
+        System.out.println("Videjais ir: " + div);
+
     }
 }
