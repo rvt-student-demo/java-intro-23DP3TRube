@@ -8,25 +8,19 @@ public class App
     
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ievadi punktus [0-100]: ");
-        int number = Integer.valueOf(scanner.nextLine());
-
-        if (number < 0) {
-            System.out.println("Neiespējams");
-        } else if (number < 50) {
-            System.out.println("Neizdevas");
-        } else if (number < 60) {
-            System.out.println("Grade: 1");
-        } else if (number < 70) {
-            System.out.println("Grade: 2");
-        }else if (number < 80) {
-            System.out.println("Grade: 3");
-        }else if (number < 90) {
-            System.out.println("Grade: 4");
-        }else if (number < 100) {
-            System.out.println("Grade: 5");
-        }else {
-            System.out.println("Izcili");
-        }
-    }
+        System.out.println("Value of the gift?");
+        int gift = Integer.valueOf(scanner.nextLine());
+    
+        if (gift >= 5000 && gift <= 25000) {
+            System.out.println("Tax: " + (100 +(gift - 5000) * 0.08) );
+        } else if (gift >= 25000 && gift <= 55000) {
+            System.out.println("Tax: " + (1700 +(gift - 25000) * 0.1) );
+        } else if (gift >= 55000 && gift <= 200000) {
+            System.out.println("Tax: " + (4700 +(gift - 55000) * 0.12) );
+        } else if (gift >= 200000 && gift <= 1000000) {
+            System.out.println("Tax: " + (22100 +(gift - 200000) * 0.15) );
+        } else if (gift >= 1000000 && gift <= 10000000) {
+            System.out.println("Tax: " + (142100 +(gift - 1000000) * 0.17) );
+        } else {System.out.println("No tax!");}
+}
 }
