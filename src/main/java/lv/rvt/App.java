@@ -7,23 +7,11 @@ public class App
 
     
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Ievadi skaitli:");
+        int skaitlis = Integer.valueOf(scanner.nextLine());
 
-        int nums = 0;
-        int sum = 0;
-
-        while (true) {
-            System.out.println("Give the number 0 to end: ");
-
-            int number = Integer.valueOf(scanner.nextLine());
-        
-            if (number != 0) {
-                sum = sum + number;
-                nums =  nums + 1;
-                continue;
-            }
-            break;
+        for (int i = 0; i <= skaitlis; i++) {
+           System.out.println(i);
         }
-        System.out.println("The ammount of number: " + nums);
-        System.out.println("The total sum: " + sum);
 }
 }
