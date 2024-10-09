@@ -2,20 +2,16 @@ package lv.rvt;
 import java.util.Scanner;
 public class App 
 {
-    public static void main( String[] args )
-    {
-
+    public static void main(String[] args) {
+        divisibleByThreeInRange(2, 10);
+    }
     
-        Scanner scanner = new Scanner(System.in);
-
-        int summa = 0;
-        System.out.println("Pedejais skaitlis?: ");
-        int ievade = Integer.valueOf(scanner.nextLine());
-
-        for (int i = 0; i <= ievade; i++) {
-            summa += i;
+    public static void divisibleByThreeInRange(int beginning, int end){
+        while (beginning<=end) {
+            if (beginning % 3 == 0 ){
+                System.out.println(beginning);
+            }
+            beginning++;
         }
-
-        System.out.println("Summa ir " + summa);
-}
+    }
 }
