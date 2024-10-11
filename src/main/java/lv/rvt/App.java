@@ -1,28 +1,27 @@
 package lv.rvt;
-
-import java.util.Scanner;
+import lv.Stars;
 
 public class App 
 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ievadi sakumu ");
-        int beginning = Integer.valueOf(scanner.nextLine());
-        System.out.print("Ievadi beigas ");
-        int end = Integer.valueOf(scanner.nextLine());
-
-        divisibleByThreeInRange(beginning, end);
-        
-        scanner.close();
+   
+        // part 1.
+        Stars.printStars(5);
+        Stars.printStars(3);
+        Stars.printStars(9);
+        // part 2.
+        Stars.printSquare(4);
+        // part 3.
+        Stars.printRectangle(17, 3);
+        // part 4.
+		Stars.printTriangle(4);
     }
 
-    public static void divisibleByThreeInRange(int beginning, int end) {
-        while (beginning <= end) {
-            if (beginning % 3 == 0) {
-                System.out.println(beginning);
-            }
-            beginning++;
-        }
-    }
+
+
+
+
+
+
+    
 }
