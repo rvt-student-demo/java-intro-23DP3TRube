@@ -15,6 +15,14 @@ public class App
         Stars.printRectangle(17, 3);
         // part 4.
 		Stars.printTriangle(4);
+        // part adv.1    
+        Stars. printSpaces(4);
+        Stars.printStars(5);
+        // part adv.2
+        Stars.printTrianglz(4);
+        // part adv.3
+        Stars.christmasTree(10);
+
     }
 
 
