@@ -1,4 +1,6 @@
 package lv;
+import java.util.ArrayList;
+
 public class Stars {
 
     public static void printStars(int number) {
