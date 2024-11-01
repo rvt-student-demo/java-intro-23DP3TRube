@@ -1,99 +1,74 @@
 package lv.rvt;
-import lv.Stars;
-import java.util.ArrayList;
-import java.util.Arrays;
+
+import java.util.Random;
 import java.util.Scanner;
 
-public class App 
-    {
-        
-        // Third element!!
+public class App {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
-        // public static void main(String[] args) {
-        //     Scanner scanner = new Scanner(System.in);
-        //     ArrayList<String> wordList = new ArrayList<>();
+//         Random random = new Random();
+//         int[] kolek = new int[10];
 
-        //     System.out.println("Ievadi vardus saraksta");
-        //     System.out.println("1: ");
-        //     wordList.add(scanner.nextLine());
-        //     System.out.println("2: ");
-        //     wordList.add(scanner.nextLine());
-        //     System.out.println("3: ");
-        //     wordList.add(scanner.nextLine());
-        //     System.out.println("Trešais vards ir: ");
-        //     System.out.println(wordList.get(2));
+//         for (int i = 0; i < 10; i++) {
+//             kolek[i] = random.nextInt(10);
+//             System.out.println(kolek[i]);
+//         }
+
+
+//         int maks = kolek[0];
+//         int minim = kolek[0];
+
+
+//         for (int number : kolek) {
+//             if (number > maks) {
+//                 maks = number;
+//             }
+//             if (number < minim) {
+//                 minim = number;
+//             }
+//         }
+
+
+//         System.out.println("Maksimalais: " + maks);
+//         System.out.println("Minimalais: " + minim);
+
+ 
+
+//     }
+
+        // public static int[] bubbleSort(){
+        // int[] sk = {6,5,6,3};
+        // for(int i = 0; i < sk.length; i++)
+        // {
+        //     for(int j = 0; j < sk.length - 1; j++)
+        //     {
+        //         if(sk[j] > sk[j + 1])
+        //         {
+        //             int helper = sk[j];
+        //             sk[j] = sk[j +1];
+        //             sk[j + 1] = helper;
+        //         }
+        //     }
+        //     return sk;
+        // }
         // }
 
-        //Second plus third
-        
-         public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            ArrayList<Integer> numbers = new ArrayList<>();
-
-            System.out.println("Ievadi skaitļus atdalīti ar ,");
-            String input = scanner.nextLine();
+        // public static void main(String[] args) {
+            
+        //     System.out.println(bubbleSort());
     
-            String[] parts = input.split(",");
-            for (String part : parts) {
-                numbers.add(Integer.parseInt(part.trim()));  
-            }
     
-            int sum = 0;
-            for (int number : numbers) {
-                sum += number;
-            }
-            
-            System.out.println("Sum of all numbers: " + sum);
-            
-
-
-
-    ///IndexOutOfBoundsException
-
-    //  public static void main(String[] args) {
-    //     ArrayList<String> wordList = new ArrayList<>();
-
-    //     wordList.add("First");
-    //     wordList.add("Second");
-
-    //     System.out.println(wordList.get(333));
-    // }
-
-
-
-    //List size!!!!!!!!
-
-
-    // public static void main(String[] args) {
-    //     Scanner scanner = new Scanner(System.in);
-
-    //     ArrayList<String> list = new ArrayList<>();
-
-    //     while (true) {
-    //         System.out.println("Enter a value (or type 'quit' to stop):");
-    //         String input = scanner.nextLine();
-            
-    //         // Break the loop if the user types "quit"
-    //         if (input.equalsIgnoreCase("quit")) {
-    //             break;
-    //         }
-            
-    //         // Add the input to the list
-    //         list.add(input);
-    //     }
-        
-    //     // Print the number of values in the list
-    //     System.out.println("Number of values on the list: " + list.size());
-    // }
-
-
-
-
-
-
-    // Last in list!!!!!!!!!! 
-}
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
-
     
