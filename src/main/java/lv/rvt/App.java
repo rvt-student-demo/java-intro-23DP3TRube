@@ -1,74 +1,62 @@
 package lv.rvt;
-
 import java.util.Random;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class App {
-//     public static void main(String[] args) {
-//         Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
 
-//         Random random = new Random();
-//         int[] kolek = new int[10];
+            int burtuskaits = 0; 
+            String garakais = new String();
+            int gadi = 0;
+            int sakits = 0;
 
-//         for (int i = 0; i < 10; i++) {
-//             kolek[i] = random.nextInt(10);
-//             System.out.println(kolek[i]);
-//         }
+while (true) {
+    
+    String ievade = reader.nextLine();
+    if (reader.equals("")) {
+        break;
+    }
 
-
-//         int maks = kolek[0];
-//         int minim = kolek[0];
-
-
-//         for (int number : kolek) {
-//             if (number > maks) {
-//                 maks = number;
-//             }
-//             if (number < minim) {
-//                 minim = number;
-//             }
-//         }
+    String[] dalas = ievade.split(",");
+    gadi = gadi + Integer.valueOf(dalas[1]);
+    sakits = sakits + 1;
 
 
-//         System.out.println("Maksimalais: " + maks);
-//         System.out.println("Minimalais: " + minim);
+    int lengthOfTheWord = dalas[0].length();
 
- 
+    if( burtuskaits <= lengthOfTheWord){
 
-//     }
+        burtuskaits = lengthOfTheWord;
 
-        // public static int[] bubbleSort(){
-        // int[] sk = {6,5,6,3};
-        // for(int i = 0; i < sk.length; i++)
-        // {
-        //     for(int j = 0; j < sk.length - 1; j++)
-        //     {
-        //         if(sk[j] > sk[j + 1])
-        //         {
-        //             int helper = sk[j];
-        //             sk[j] = sk[j +1];
-        //             sk[j + 1] = helper;
-        //         }
-        //     }
-        //     return sk;
-        // }
-        // }
+}
+    if(dalas[0].length() == burtuskaits){
 
-        // public static void main(String[] args) {
-            
-        //     System.out.println(bubbleSort());
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        garakais = dalas[0];
     
     }
+    
+    gadi = gadi + Integer.valueOf(dalas[1]);
+    
+    sakits = sakits + 1;
+    
+    if(sakits > 0){
+    
+    double videjais = (1.0*gadi/sakits);
+
+
+    
+    
+    
+    System.out.println("Garakais vards: " + garakais);
+    
+    System.out.println("Videjais dzimšanas gads: " + videjais);
+    
+    }
+
+}}}
+
     
