@@ -1,72 +1,94 @@
 package lv.rvt;
-
 import java.util.Scanner;
 
 public class App {
+//     public static void main(String[] args) {
+//         PaymentCard card = new PaymentCard(50);
+//         System.out.println(card);
+//     }
+
+//              ///part 2
+
+
+//     public static void main(String[] args) {
+//         PaymentCard card = new PaymentCard(50);
+//         System.out.println(card);
+
+//         card.eatAffordably();
+//         System.out.println(card);
+
+//         card.eatHeartily();
+//         card.eatAffordably();
+//         System.out.println(card);
+        
+//     }
+
+//              // part 3
+
+//     public static void main(String[] args) {
+//         PaymentCard card = new PaymentCard(5);
+//         System.out.println(card);
+
+//         card.eatHeartily();
+//         System.out.println(card);
+
+//         card.eatHeartily();
+//         System.out.println(card);
+// }
+    
+             ///part 4
+    
+    // public static void main(String[] args) {
+    //     PaymentCard card = new PaymentCard(10);
+    //     System.out.println(card);
+
+    //     card.addMoney(15);
+    //     System.out.println(card);
+
+    //     card.addMoney(10);
+    //     System.out.println(card);
+
+    //     card.addMoney(200);
+    //     System.out.println(card);
+    // }
+
+            //// Part 5
+
+    // public static void main(String[] args) {
+    //     PaymentCard card = new PaymentCard(10);
+    //     System.out.println("Paul: " + card);
+        
+    //     card.addMoney(-15);  
+    //     System.out.println("Paul: " + card); 
+    // }
+    // }
     public static void main(String[] args) {
-        System.out.println("Part 1");
-        Statistics statistics = new Statistics();
-        statistics.addNumber(3);
-        statistics.addNumber(5);
-        statistics.addNumber(1);
-        statistics.addNumber(2);
-        System.out.println("Count: " + statistics.getCount());
-        System.out.println();
 
-// part 2
-        System.out.println("Part 2");
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Average: " + statistics.average());
-        System.out.println();
+    PaymentCard paulsCard = new PaymentCard(20);
+    PaymentCard mattsCard = new PaymentCard(30);
 
 
-// part 3
-        System.out.println("Part 3");
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter numbers:");
-
-        while (true) {
-            int number = scanner.nextInt();
-            if (number == -1) {
-                break; 
-            }
-            statistics.addNumber(number);
-        }
-
-        System.out.println("Sum of entered numbers: " + statistics.sum());
-        System.out.println();
-
-//part 4
-        System.out.println("part 4");
-
-        Statistics allNumbers = new Statistics();
-        Statistics evenNumbers = new Statistics();
-        Statistics oddNumbers = new Statistics();
-
-        System.out.println("Enter numbers:");
+    paulsCard.eatHeartily();
+    mattsCard.eatAffordably();
 
 
-        while (true) {
-            int number = scanner.nextInt();
-            if (number == -1) {
-                break; 
-            }
-            
-
-            allNumbers.addNumber(number);
-            
-
-            if (number % 2 == 0) {
-                evenNumbers.addNumber(number);
-            } else {
-                oddNumbers.addNumber(number);
-            }
-        }
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
 
 
-        System.out.println("Sum: " + allNumbers.sum());
-        System.out.println("Sum of even numbers: " + evenNumbers.sum());
-        System.out.println("Sum of odd numbers: " + oddNumbers.sum());
-}       
+    paulsCard.addMoney(20);
+    mattsCard.eatHeartily();
+
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
+
+    paulsCard.eatAffordably();
+    paulsCard.eatAffordably();
+
+    mattsCard.addMoney(50);
+    
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
+}
+
 }
