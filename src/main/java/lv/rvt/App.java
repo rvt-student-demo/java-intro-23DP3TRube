@@ -1,94 +1,52 @@
 package lv.rvt;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
-//     public static void main(String[] args) {
-//         PaymentCard card = new PaymentCard(50);
-//         System.out.println(card);
-//     }
-
-//              ///part 2
-
-
-//     public static void main(String[] args) {
-//         PaymentCard card = new PaymentCard(50);
-//         System.out.println(card);
-
-//         card.eatAffordably();
-//         System.out.println(card);
-
-//         card.eatHeartily();
-//         card.eatAffordably();
-//         System.out.println(card);
+        public static void main(String[] args) {
+                
         
-//     }
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Book> books = new ArrayList<>(); {
 
-//              // part 3
+                while (true) {
+                        System.out.print("Enter book title (or leave empty to finish): ");
+                        String title = scanner.nextLine();
+                        if (title.isEmpty()) {
+                            break;
+                        }
+            
+                        try {
+                            System.out.print("Enter number of pages: ");
+                            int pages = Integer.parseInt(scanner.nextLine());
+            
+                            System.out.print("Enter publication year: ");
+                            int year = Integer.parseInt(scanner.nextLine());
+            
+                            books.add(new Book(pages, year, title));
+                        } catch (NumberFormatException e) {
+                            System.out.println("Please enter valid numeric values for pages and year.");
+                        }
+                    }
+            
 
-//     public static void main(String[] args) {
-//         PaymentCard card = new PaymentCard(5);
-//         System.out.println(card);
-
-//         card.eatHeartily();
-//         System.out.println(card);
-
-//         card.eatHeartily();
-//         System.out.println(card);
-// }
-    
-             ///part 4
-    
-    // public static void main(String[] args) {
-    //     PaymentCard card = new PaymentCard(10);
-    //     System.out.println(card);
-
-    //     card.addMoney(15);
-    //     System.out.println(card);
-
-    //     card.addMoney(10);
-    //     System.out.println(card);
-
-    //     card.addMoney(200);
-    //     System.out.println(card);
-    // }
-
-            //// Part 5
-
-    // public static void main(String[] args) {
-    //     PaymentCard card = new PaymentCard(10);
-    //     System.out.println("Paul: " + card);
-        
-    //     card.addMoney(-15);  
-    //     System.out.println("Paul: " + card); 
-    // }
-    // }
-    public static void main(String[] args) {
-
-    PaymentCard paulsCard = new PaymentCard(20);
-    PaymentCard mattsCard = new PaymentCard(30);
-
-
-    paulsCard.eatHeartily();
-    mattsCard.eatAffordably();
-
-
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
-
-
-    paulsCard.addMoney(20);
-    mattsCard.eatHeartily();
-
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
-
-    paulsCard.eatAffordably();
-    paulsCard.eatAffordably();
-
-    mattsCard.addMoney(50);
-    
-    System.out.println("Paul: " + paulsCard);
-    System.out.println("Matt: " + mattsCard);
+                    System.out.print("What do you want to print (everything/name)? ");
+                    String choice = scanner.nextLine().toLowerCase();
+            
+                    if (choice.equals("everything")) {
+                        for (Book book : books) {
+                            System.out.println(book);
+                        }
+                    } else if (choice.equals("name")) {
+                        for (Book book : books) {
+                            System.out.println(book.getTitle());
+                        }
+                    } else {
+                        System.out.println("Invalid choice!");
+                    }
+            
+                    scanner.close();
 }
 
-}
+}}
