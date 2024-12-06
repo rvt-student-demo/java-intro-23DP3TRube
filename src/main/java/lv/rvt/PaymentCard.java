@@ -19,18 +19,27 @@ public class PaymentCard {
         }
     }
 
-
-    public void addMoney(double amount) {
-        if (amount > 0) { 
-            this.balance += amount;
-            if (this.balance > 150) {
-                this.balance = 150; 
-            }
-        }
-        
-    }
-
     public String toString() {
         return "The card has a balance of " + this.balance + " euros";
     }
+    public double balance() {
+        return this.balance;
+    }
+
+    public void addMoney(double increase) {
+        this.balance = this.balance + increase;
+    }
+
+    public boolean takeMoney(double amount) {
+
+
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            return true;
+        }
+        return false;
+        // implement the method so that it only takes money from the card if
+        // the balance is at least the amount parameter.
+        // returns true if successful and false otherwise
+}
 }
