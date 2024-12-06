@@ -10,4 +10,8 @@ public class HealthStation {
          
     }
 
+    public void feed(Person person){
+        person.setWeight(person.getWeight() + 1);
+    }
+
 }
