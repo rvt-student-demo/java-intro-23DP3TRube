@@ -6,6 +6,7 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    private SimpleDate date;
 
     public Person(String name) {
         this(name, 0, 0, 0);
@@ -14,6 +15,13 @@ public class Person {
     public Person(String name, int age, int height, int weight) {
         this.name = name;
         this.age = age;
+        this.weight = weight;
+        this.height = height;
+    }
+
+    public Person(String name, SimpleDate date, int height, int weight) {
+        this.name = name;
+        this.date = date;
         this.weight = weight;
         this.height = height;
     }
@@ -53,6 +61,27 @@ public class Person {
         return this.weight / (heightPerHundred * heightPerHundred);
     }
 
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        }
+
+        if (!(compared instanceof Person)) {
+            return false;
+        }
+
+
+        Person comparedPerson = (Person) compared;
+
+        if (this.name.equals(comparedPerson.name) &&
+            this.age == comparedPerson.age &&
+            this.weight == comparedPerson.weight &&
+            this.height == comparedPerson.height) {
+            return true;
+        }
+
+        return false;
+    }
     @Override
     public String toString() {
         return this.name + ", age " + this.age + " years";
