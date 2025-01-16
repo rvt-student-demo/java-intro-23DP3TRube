@@ -32,4 +32,18 @@ public class Box {
         return  2 * this.height + 2 * this.width + 2 * this.length ; 
     }
 
+    public double faceArea(){
+        return this.height * this.length ;
+    }
+    public double topArea(){
+        return this.height * this.length ;
+    }
+    public double sideArea(){
+        return this.height * this.length ;
+    }
+    public double length(){
+        return this.length;
+
+}
+
 }
