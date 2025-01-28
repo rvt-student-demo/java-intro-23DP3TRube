@@ -18,11 +18,11 @@ public class Box {
 
     }
 
-    // public Box(Box oldBox){
-    //     this.height = oldBox.height();
-    //     this.length = oldBox.length();
-    //     this.width = oldBox.width();
-    // }
+    public Box(Box oldBox){
+        this.height = oldBox.height();
+        this.length = oldBox.length();
+        this.width = oldBox.width();
+    }
 
 
     public double volume(){
@@ -43,7 +43,14 @@ public class Box {
     }
     public double length(){
         return this.length;
-
-}
-
+    }
+    public double width(){
+        return this.width;
+    }
+    public double height(){
+        return this.height;
+    }
+    public Box biggerBox( Box oldBox){
+        
+    }
 }
