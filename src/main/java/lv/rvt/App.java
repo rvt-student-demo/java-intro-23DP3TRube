@@ -1,21 +1,24 @@
 package lv.rvt;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import lv.rvt.tools.Helper;
+
 
     class App {
-        public static void main(String[] args) {
+        public static void main(String[] args) throws Exception {
             
-            ArrayList<GeometricShape> shapes = new ArrayList<>();
-            
-            shapes.add(new Circle(6));
-            shapes.add(new Triangle(3, 88, 1));
+            BufferedReader reader = Helper.getReader("persons.csv");
 
-            for(GeometricShape shape : shapes){
-                shape.displayInfo();
+
+                String line = reader.readLine();
+            while (line != null) {
+                System.out.println(line);
+                line = reader.readLine();
             }
-
-
-}
+            
+            System.out.println("Visas rindas ir izlasitas!");
+        }
 }
